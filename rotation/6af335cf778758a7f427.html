@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>My Internal Medicine Rotation</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#fff; --soft:#f8fafc; --text:#18212f; --muted:#667085; --line:#e6e9ee;
+    --blue:#2563eb; --blue-soft:#eff6ff; --purple:#6d5ce7; --purple-soft:#f5f3ff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+  .page{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+  .top{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px 30px}
+  .eyebrow{color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+  h1{margin:0 0 7px;font-size:30px;line-height:1.1;letter-spacing:-.03em}
+  .student{font-size:16px;font-weight:750}
+  .meta{margin-top:3px;color:var(--muted);font-size:13px}
+  .progress{margin-top:22px;padding-top:17px;border-top:1px solid var(--line)}
+  .progress-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .label{color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+  .value{font-size:17px;font-weight:800}
+  .track{height:6px;background:#e9edf2;border-radius:999px;overflow:hidden}
+  .fill{height:100%;background:var(--blue);border-radius:999px}
+  .progress-foot{margin-top:7px;color:var(--muted);font-size:12px}
+  .weeks{margin-top:18px}
+  details{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-top:10px;overflow:hidden}
+  details[open]{border-color:#d7dce5}
+  summary{list-style:none;cursor:pointer;padding:17px 19px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  .week-title{font-size:14px;font-weight:800}
+  .week-status{color:var(--muted);font-size:12px;margin-top:2px}
+  .chevron{color:var(--muted);font-size:15px;transition:transform .15s ease}
+  details[open] .chevron{transform:rotate(180deg)}
+  .week-body{padding:0 19px 20px;border-top:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+  .info{border:1px solid var(--line);background:var(--soft);border-radius:12px;padding:13px 14px}
+  .info.full{grid-column:1/-1}
+  .info-label{color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+  .info-value{font-size:13.5px;font-weight:700;line-height:1.45}
+  .names{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 9px;font-size:12px;font-weight:700}
+  .night{background:var(--purple-soft);border-color:#e6e1ff}
+  .night .info-label{color:var(--purple)}
+  .presentation{background:var(--blue-soft);border-color:#dceaff}
+  .schedule{width:100%;border-collapse:collapse;margin-top:7px}
+  .schedule td{border-top:1px solid var(--line);padding:9px 0;vertical-align:top;font-size:12.5px}
+  .schedule td:first-child{width:36%;font-weight:750;padding-right:10px}
+  .note{margin-top:18px;color:var(--muted);font-size:11.5px;text-align:center}
+  .summary{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 19px}
+  .summary-title{font-size:17px;font-weight:800;letter-spacing:-.01em;margin-bottom:16px}
+  .summary-section{margin-top:16px}
+  .summary-section:first-of-type{margin-top:0}
+  .summary-subtitle{margin-bottom:8px;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+  .summary-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:11px;overflow:hidden}
+  .summary-table th,.summary-table td{padding:10px 11px;text-align:left;font-size:12.5px;border-bottom:1px solid var(--line);vertical-align:top}
+  .summary-table th{background:var(--soft);color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+  .summary-table tr:last-child td{border-bottom:0}
+  .summary-table td:first-child{width:34%;font-weight:750}
+  .summary-note{margin-top:11px;color:var(--muted);font-size:11px}
+  @media(max-width:600px){
+    .top{padding:23px 20px} h1{font-size:27px} .grid{grid-template-columns:1fr} .info.full{grid-column:auto}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top">
+    <div class="eyebrow">Personalized Rotation</div>
+    <h1>My Internal Medicine Rotation</h1>
+    <div class="student">Shaban Kevin Muzungu</div>
+    <div class="meta">21 September – 4 December 2026</div>
+    <div class="progress">
+      <div class="progress-row">
+        <div class="label">Internal Medicine Progress</div>
+        <div class="value">9%</div>
+      </div>
+      <div class="track"><div class="fill" style="width:9%"></div></div>
+      <div class="progress-foot">Week 1 of 11</div>
+    </div>
+  </div>
+
+  <section class="summary">
+    <div class="summary-title">Your Rotation Summary</div>
+    <div class="summary-section">
+      <div class="summary-subtitle">🌙 Night Shifts</div>
+      <table class="summary-table"><thead><tr><th>Date</th><th>Schedule</th></tr></thead><tbody><tr><td>Friday, 2 Oct</td><td>17:00 · Night duty</td></tr><tr><td>Monday, 26 Oct</td><td>17:00 · Night duty</td></tr><tr><td>Monday, 16 Nov</td><td>17:00 · Night duty</td></tr><tr><td>Friday, 27 Nov</td><td>17:00 · Night duty</td></tr></tbody></table>
+    </div>
+    <div class="summary-section">
+      <div class="summary-subtitle">📆 Weekend Duties</div>
+      <table class="summary-table"><thead><tr><th>Date</th><th>Duty</th></tr></thead><tbody><tr><td>Saturday, 24 Oct</td><td>Day duty</td></tr><tr><td>Sunday, 8 Nov</td><td>Day duty</td></tr><tr><td>Saturday, 21 Nov</td><td>Night duty</td></tr></tbody></table>
+    </div>
+    <div class="summary-section">
+      <div class="summary-subtitle">🏥 Izere / Pavillon</div>
+      <table class="summary-table"><thead><tr><th>Week</th><th>Placement</th></tr></thead><tbody><tr><td>9–13 Nov</td><td>Pavillon</td></tr></tbody></table>
+    </div>
+    <div class="summary-note">A quick view of your major duties and special placements across the full rotation.</div>
+  </section>
+
+  <div class="weeks">
+    <details data-monday="2026-09-21" open>
+      <summary>
+        <div>
+          <div class="week-title">Week 1 · 21–25 September</div>
+          <div class="week-status" data-base="Emergency · Presentation" data-division="Emergency">Emergency · Current week</div>
+        </div>
+        <div class="chevron">⌄</div>
+      </summary>
+      <div class="week-body">
+        <div class="grid">
+          <div class="info"><div class="info-label">Your Division</div><div class="info-value">Emergency</div></div>
+          <div class="info"><div class="info-label">Izere / Pavillon</div><div class="info-value">No placement for you this week</div></div>
+          <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">Philbert Ntwari</span><span class="chip">Mizab Babiker Mustafa Tabidi Abdallah</span><span class="chip">Martha Izabayo</span><span class="chip">Nathalie Isimbi Bukoko</span></div></div>
+          <div class="info full presentation"><div class="info-label">Presentation</div><div class="info-value">Wednesday, 23 September · Vit B12 deficiency</div></div>
+          <div class="info full "><div class="info-label">Night Duty</div><div class="info-value">No night duty</div></div>
+          <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">No weekend duty</div></div>
+          <div class="info full">
+            <div class="info-label">Your Week</div>
+            <table class="schedule"><tr><td>Monday, 21 Sep</td><td>Emergency</td></tr><tr><td>Tuesday, 22 Sep</td><td>Emergency</td></tr><tr><td>Wednesday, 23 Sep</td><td>🎤 Presentation · Emergency</td></tr><tr><td>Thursday, 24 Sep</td><td>Emergency</td></tr><tr><td>Friday, 25 Sep</td><td>Emergency</td></tr></table>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details data-monday="2026-09-28" >
+      <summary>
+        <div>
+          <div class="week-title">Week 2 · 28 September–2 October</div>
+          <div class="week-status" data-base="Emergency" data-division="Emergency">Emergency</div>
+        </div>
+        <div class="chevron">⌄</div>
+      </summary>
+      <div class="week-body">
+        <div class="grid">
+          <div class="info"><div class="info-label">Your Division</div><div class="info-value">Emergency</div></div>
+          <div class="info"><div class="info-label">Izere / Pavillon</div><div class="info-value">No placement for you this week</div></div>
+          <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">Philbert Ntwari</span><span class="chip">Mizab Babiker Mustafa Tabidi Abdallah</span><span class="chip">Martha Izabayo</span><span class="chip">Nathalie Isimbi Bukoko</span></div></div>
+          <div class="info full "><div class="info-label">Presentation</div><div class="info-value">No presentation this week</div></div>
+          <div class="info full night"><div class="info-label">Night Duty</div><div class="info-value">Friday, 2 October · 17:00</div></div>
+          <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">No weekend duty</div></div>
+          <div class="info full">
+            <div class="info-label">Your Week</div>
+            <table class="schedule"><tr><td>Monday, 28 Sep</td><td>Emergency</td></tr><tr><td>Tuesday, 29 Sep</td><td>Emergency</td></tr><tr><td>Wednesday, 30 Sep</td><td>Emergency</td></tr><tr><td>Thursday, 1 Oct</td><td>Emergency</td></tr><tr><td>Friday, 2 Oct</td><td>🌙 Night duty · 17:00</td></tr></table>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details data-monday="2026-10-05" >
+      <summary>
+        <div>
+          <div class="week-title">Week 3 · 5–9 October</div>
+          <div class="week-status" data-base="— · Presentation" data-division="—">— · Presentation</div>
+        </div>
+        <div class="chevron">⌄</div>
+      </summary>
+      <div class="week-body">
+        <div class="grid">
+          <div class="info"><div class="info-label">Your Division</div><div class="info-value">—</div></div>
+          <div class="info"><div class="info-label">Izere / Pavillon</div><div class="info-value">No placement for you this week</div></div>
+          <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">No colleagues listed</span></div></div>
+          <div class="info full presentation"><div class="info-label">Presentation</div><div class="info-value">Thursday, 8 October · Meningitis</div></div>
+          <div class="info full "><div class="info-label">Night Duty</div><div class="info-value">No night duty</div></div>
+          <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">No weekend duty</div></div>
+          <div class="info full">
+            <div class="info-label">Your Week</div>
+            <table class="schedule"><tr><td>Monday, 5 Oct</td><td>💤 Post-night · No daytime attendance</td></tr><tr><td>Tuesday, 6 Oct</td><td>—</td></tr><tr><td>Wednesday, 7 Oct</td><td>—</td></tr><tr><td>Thursday, 8 Oct</td><td>🎤 Presentation</td></tr><tr><td>Friday, 9 Oct</td><td>—</td></tr></table>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details data-monday="2026-10-12" >
+      <summary>
+        <div>
+          <div class="week-title">Week 4 · 12–16 October</div>
+          <div class="week-status" data-base="—" data-division="—">—</div>
+        </div>
+        <div class="chevron">⌄</div>
+      </summary>
+      <div class="week-body">
+        <div class="grid">
+          <div class="info"><div class="info-label">Your Division</div><div class="info-value">—</div></div>
+          <div class="info"><div class="info-label">Izere / Pavillon</div><div class="info-value">No placement for you this week</div></div>
+          <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">No colleagues listed</span></div></div>
+          <div class="info full "><div class="info-label">Presentation</div><div class="info-value">No presentation this week</div></div>
+          <div class="info full "><div class="info-label">Night Duty</div><div class="info-value">No night duty</div></div>
+          <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">No weekend duty</div></div>
+          <div class="info full">
+            <div class="info-label">Your Week</div>
+            <table class="schedule"><tr><td>Monday, 12 Oct</td><td>—</td></tr><tr><td>Tuesday, 13 Oct</td><td>—</td></tr><tr><td>Wednesday, 14 Oct</td><td>—</td></tr><tr><td>Thursday, 15 Oct</td><td>—</td></tr><tr><td>Friday, 16 Oct</td><td>—</td></tr></table>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details data-monday="2026-10-19" >
+      <summary>
+        <div>
+          <div class="week-title">Week 5 · 19–23 October</div>
+          <div class="week-status" data-base="—" data-division="—">—</div>
+        </div>
+        <div class="chevron">⌄</div>
+      </summary>
+      <div class="week-body">
+        <div class="grid">
+          <div class="info"><div class="info-label">Your Division</div><div class="info-value">—</div></div>
+          <div class="info"><div class="info-label">Izere / Pavillon</div><div class="info-value">No placement for you this week</div></div>
+          <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">No colleagues listed</span></div></div>
+          <div class="info full "><div class="info-label">Presentation</div><div class="info-value">No presentation this week</div></div>
+          <div class="info full "><div class="info-label">Night Duty</div><div class="info-value">No night duty</div></div>
+          <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">Saturday, 24 October · Day duty</div></div>
+          <div class="info full">
+            <div class="info-label">Your Week</div>
+            <table class="schedule"><tr><td>Monday, 19 Oct</td><td>—</td></tr><tr><td>Tuesday, 20 Oct</td><td>—</td></tr><tr><td>Wednesday, 21 Oct</td><td>—</td></tr><tr><td>Thursday, 22 Oct</td><td>—</td></tr><tr><td>Friday, 23 Oct</td><td>—</td></tr></table>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details data-monday="2026-10-26" >
+      <summary>
+        <div>
+          <div class="week-title">Week 6 · 26–30 October</div>
+          <div class="week-status" data-base="Ward 3 · Presentation" data-division="Ward 3">Ward 3 · Presentation</div>
+        </div>
+        <div class="chevron">⌄</div>
+      </summary>
+      <div class="week-body">
+        <div class="grid">
+          <div class="info"><div class="info-label">Your Division</div><div class="info-value">Ward 3</div></div>
+          <div class="info"><div class="info-label">Izere / Pavillon</div><div class="info-value">No placement for you this week</div></div>
+          <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">Philbert Ntwari</span><span class="chip">Mizab Babiker Mustafa Tabidi Abdallah</span><span class="chip">Martha Izabayo</span><span class="chip">Nathalie Isimbi Bukoko</span></div></div>
+          <div class="info full presentation"><div class="info-label">Presentation</div><div class="info-value">Wednesday, 28 October · Heart Failure diagnosis &amp; management</div></div>
+          <div class="info full night"><div class="info-label">Night Duty</div><div class="info-value">Monday, 26 October · 17:00</div></div>
+          <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">No weekend duty</div></div>
+          <div class="info full">
+            <div class="info-label">Your Week</div>
+            <table class="schedule"><tr><td>Monday, 26 Oct</td><td>🌙 Night duty · 17:00</td></tr><tr><td>Tuesday, 27 Oct</td><td>💤 Post-night · No daytime attendance</td></tr><tr><td>Wednesday, 28 Oct</td><td>🎤 Presentation · Ward 3</td></tr><tr><td>Thursday, 29 Oct</td><td>Ward 3</td></tr><tr><td>Friday, 30 Oct</td><td>Ward 3</td></tr></table>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details data-monday="2026-11-02" >
+      <summary>
+        <div>
+          <div class="week-title">Week 7 · 2–6 November</div>
+          <div class="week-status" data-base="Ward 3" data-division="Ward 3">Ward 3</div>
+        </div>
+        <div class="chevron">⌄</div>
+      </summary>
+      <div class="week-body">
+        <div class="grid">
+          <div class="info"><div class="info-label">Your Division</div><div class="info-value">Ward 3</div></div>
+          <div class="info"><div class="info-label">Izere / Pavillon</div><div class="info-value">No placement for you this week</div></div>
+          <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">Philbert Ntwari</span><span class="chip">Mizab Babiker Mustafa Tabidi Abdallah</span><span class="chip">Martha Izabayo</span><span class="chip">Nathalie Isimbi Bukoko</span></div></div>
+          <div class="info full "><div class="info-label">Presentation</div><div class="info-value">No presentation this week</div></div>
+          <div class="info full "><div class="info-label">Night Duty</div><div class="info-value">No night duty</div></div>
+          <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">Sunday, 8 November · Day duty</div></div>
+          <div class="info full">
+            <div class="info-label">Your Week</div>
+            <table class="schedule"><tr><td>Monday, 2 Nov</td><td>Ward 3</td></tr><tr><td>Tuesday, 3 Nov</td><td>Ward 3</td></tr><tr><td>Wednesday, 4 Nov</td><td>Ward 3</td></tr><tr><td>Thursday, 5 Nov</td><td>Ward 3</td></tr><tr><td>Friday, 6 Nov</td><td>Ward 3</td></tr></table>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details data-monday="2026-11-09" >
+      <summary>
+        <div>
+          <div class="week-title">Week 8 · 9–13 November</div>
+          <div class="week-status" data-base="Ward 3 · Pavillon" data-division="Ward 3">Ward 3 · Pavillon</div>
+        </div>
+        <div class="chevron">⌄</div>
+      </summary>
+      <div class="week-body">
+        <div class="grid">
+          <div class="info"><div class="info-label">Your Division</div><div class="info-value">Ward 3</div></div>
+          <div class="info"><div class="info-label">Izere / Pavillon</div><div class="info-value">Pavillon · 9–13 November</div></div>
+          <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">Philbert Ntwari</span><span class="chip">Mizab Babiker Mustafa Tabidi Abdallah</span><span class="chip">Martha Izabayo</span><span class="chip">Nathalie Isimbi Bukoko</span></div></div>
+          <div class="info full "><div class="info-label">Presentation</div><div class="info-value">No presentation this week</div></div>
+          <div class="info full "><div class="info-label">Night Duty</div><div class="info-value">No night duty</div></div>
+          <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">No weekend duty</div></div>
+          <div class="info full">
+            <div class="info-label">Your Week</div>
+            <table class="schedule"><tr><td>Monday, 9 Nov</td><td>Ward 3</td></tr><tr><td>Tuesday, 10 Nov</td><td>Ward 3</td></tr><tr><td>Wednesday, 11 Nov</td><td>Ward 3</td></tr><tr><td>Thursday, 12 Nov</td><td>Ward 3</td></tr><tr><td>Friday, 13 Nov</td><td>Ward 3</td></tr></table>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details data-monday="2026-11-16" >
+      <summary>
+        <div>
+          <div class="week-title">Week 9 · 16–20 November</div>
+          <div class="week-status" data-base="Emergency · Presentation" data-division="Emergency">Emergency · Presentation</div>
+        </div>
+        <div class="chevron">⌄</div>
+      </summary>
+      <div class="week-body">
+        <div class="grid">
+          <div class="info"><div class="info-label">Your Division</div><div class="info-value">Emergency</div></div>
+          <div class="info"><div class="info-label">Izere / Pavillon</div><div class="info-value">No placement for you this week</div></div>
+          <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">Philbert Ntwari</span><span class="chip">Mizab Babiker Mustafa Tabidi Abdallah</span><span class="chip">Martha Izabayo</span><span class="chip">Nathalie Isimbi Bukoko</span></div></div>
+          <div class="info full presentation"><div class="info-label">Presentation</div><div class="info-value">Wednesday, 18 November · Cirrhosis</div></div>
+          <div class="info full night"><div class="info-label">Night Duty</div><div class="info-value">Monday, 16 November · 17:00</div></div>
+          <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">Saturday, 21 November · Night duty</div></div>
+          <div class="info full">
+            <div class="info-label">Your Week</div>
+            <table class="schedule"><tr><td>Monday, 16 Nov</td><td>🌙 Night duty · 17:00</td></tr><tr><td>Tuesday, 17 Nov</td><td>💤 Post-night · No daytime attendance</td></tr><tr><td>Wednesday, 18 Nov</td><td>🎤 Presentation · Emergency</td></tr><tr><td>Thursday, 19 Nov</td><td>Emergency</td></tr><tr><td>Friday, 20 Nov</td><td>Emergency</td></tr></table>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details data-monday="2026-11-23" >
+      <summary>
+        <div>
+          <div class="week-title">Week 10 · 23–27 November</div>
+          <div class="week-status" data-base="Emergency" data-division="Emergency">Emergency</div>
+        </div>
+        <div class="chevron">⌄</div>
+      </summary>
+      <div class="week-body">
+        <div class="grid">
+          <div class="info"><div class="info-label">Your Division</div><div class="info-value">Emergency</div></div>
+          <div class="info"><div class="info-label">Izere / Pavillon</div><div class="info-value">No placement for you this week</div></div>
+          <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">Philbert Ntwari</span><span class="chip">Mizab Babiker Mustafa Tabidi Abdallah</span><span class="chip">Martha Izabayo</span><span class="chip">Nathalie Isimbi Bukoko</span></div></div>
+          <div class="info full "><div class="info-label">Presentation</div><div class="info-value">No presentation this week</div></div>
+          <div class="info full night"><div class="info-label">Night Duty</div><div class="info-value">Friday, 27 November · 17:00</div></div>
+          <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">No weekend duty</div></div>
+          <div class="info full">
+            <div class="info-label">Your Week</div>
+            <table class="schedule"><tr><td>Monday, 23 Nov</td><td>Emergency</td></tr><tr><td>Tuesday, 24 Nov</td><td>Emergency</td></tr><tr><td>Wednesday, 25 Nov</td><td>Emergency</td></tr><tr><td>Thursday, 26 Nov</td><td>Emergency</td></tr><tr><td>Friday, 27 Nov</td><td>🌙 Night duty · 17:00</td></tr></table>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details data-monday="2026-11-30" >
+      <summary>
+        <div>
+          <div class="week-title">Week 11 · 30 November–4 December</div>
+          <div class="week-status" data-base="Emergency · Final week" data-division="Emergency">Emergency · Final week</div>
+        </div>
+        <div class="chevron">⌄</div>
+      </summary>
+      <div class="week-body">
+        <div class="grid">
+          <div class="info"><div class="info-label">Your Division</div><div class="info-value">Emergency</div></div>
+          <div class="info"><div class="info-label">Izere / Pavillon</div><div class="info-value">No placement for you this week</div></div>
+          <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">Philbert Ntwari</span><span class="chip">Mizab Babiker Mustafa Tabidi Abdallah</span><span class="chip">Martha Izabayo</span><span class="chip">Nathalie Isimbi Bukoko</span></div></div>
+          <div class="info full "><div class="info-label">Presentation</div><div class="info-value">No presentation this week</div></div>
+          <div class="info full "><div class="info-label">Night Duty</div><div class="info-value">No night duty</div></div>
+          <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">No weekend duty</div></div>
+          <div class="info full">
+            <div class="info-label">Your Week</div>
+            <table class="schedule"><tr><td>Monday, 30 Nov</td><td>💤 Post-night · No daytime attendance</td></tr><tr><td>Tuesday, 1 Dec</td><td>Emergency</td></tr><tr><td>Wednesday, 2 Dec</td><td>Emergency</td></tr><tr><td>Thursday, 3 Dec</td><td>Emergency</td></tr><tr><td>Friday, 4 Dec</td><td>Emergency</td></tr></table>
+          </div>
+        </div>
+      </div>
+    </details></div>
+
+  <div class="note">Only your personalized rotation information is shown.</div>
+</div>
+<script>
+// Opens the current week (Africa/Kigali time) and updates the progress bar, so a
+// page published days ago still shows the right week when a student opens it.
+(function () {
+  try {
+    var p = new Intl.DateTimeFormat('en-US', { timeZone: 'Africa/Kigali', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
+    var v = {}; for (var k = 0; k < p.length; k++) v[p[k].type] = p[k].value;
+    var today = v.year + '-' + v.month + '-' + v.day;
+    var items = document.querySelectorAll('details[data-monday]');
+    if (!items.length) return;
+    var cur = 0, i;
+    for (i = 0; i < items.length; i++) { if (today >= items[i].getAttribute('data-monday')) cur = i; }
+    for (i = 0; i < items.length; i++) {
+      var st = items[i].querySelector('.week-status');
+      if (i === cur) {
+        items[i].setAttribute('open', '');
+        st.textContent = st.getAttribute('data-division') + ' · Current week';
+      } else {
+        items[i].removeAttribute('open');
+        st.textContent = st.getAttribute('data-base');
+      }
+    }
+    var pct = Math.round(((cur + 1) / items.length) * 100);
+    document.querySelector('.progress .value').textContent = pct + '%';
+    document.querySelector('.progress .fill').style.width = pct + '%';
+    document.querySelector('.progress .progress-foot').textContent = 'Week ' + (cur + 1) + ' of ' + items.length;
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
