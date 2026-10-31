@@ -378,16 +378,15 @@
 <script>
 // Opens the current week (Africa/Kigali time) and updates the progress bar, so a
 // page published days ago still shows the right week when a student opens it.
-// Saturday and Sunday count as the UPCOMING week, exactly like the weekly email
-// (sent Saturday evening), so the percentage here always matches the email.
+// Only SUNDAY counts as the UPCOMING week, exactly like the weekly email
+// (sent Sunday morning), so the percentage here always matches the email.
 (function () {
   try {
     var p = new Intl.DateTimeFormat('en-US', { timeZone: 'Africa/Kigali', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
     var v = {}; for (var k = 0; k < p.length; k++) v[p[k].type] = p[k].value;
     var t = new Date(Date.UTC(+v.year, +v.month - 1, +v.day));
     var dow = t.getUTCDay();
-    if (dow === 6) t.setUTCDate(t.getUTCDate() + 2);
-    else if (dow === 0) t.setUTCDate(t.getUTCDate() + 1);
+    if (dow === 0) t.setUTCDate(t.getUTCDate() + 1);
     var today = t.toISOString().slice(0, 10);
     var items = document.querySelectorAll('details[data-monday]');
     if (!items.length) return;
