@@ -58,22 +58,28 @@
   .summary-section{margin-top:16px}
   .summary-section:first-of-type{margin-top:0}
   .summary-subtitle{margin-bottom:9px;color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+  /* Every summary table has exactly two columns. */
   .summary-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:11px;overflow:hidden}
   .summary-table th,.summary-table td{padding:12px 13px;text-align:left;font-size:16px;border-bottom:1px solid var(--line);vertical-align:top}
   .summary-table th{background:var(--soft);color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
   .summary-table tr:last-child td{border-bottom:0}
   .summary-table td:first-child{width:1%;white-space:nowrap;font-weight:750;padding-right:18px}
-  .summary-table td[colspan]{width:auto;white-space:normal}
-  .pres-table{min-width:760px}
-  .pres-table th:nth-child(1),.pres-table td:nth-child(1){min-width:160px;white-space:nowrap}
-  .pres-table th:nth-child(2),.pres-table td:nth-child(2){min-width:240px}
-  .pres-table th:nth-child(3),.pres-table td:nth-child(3){min-width:180px}
-  .pres-table th:nth-child(4),.pres-table td:nth-child(4){min-width:220px;white-space:nowrap}
+  .summary-table td[colspan]{width:auto;white-space:normal;font-weight:400}
+  .cell-main{font-weight:750;line-height:1.4}
+  .cell-sub{margin-top:4px;font-size:15px;font-weight:500;line-height:1.45}
+  .cell-label{color:var(--muted);font-weight:700}
+  .cell-time{margin-top:3px;color:var(--muted);font-size:14px;font-weight:600}
+  .badge{display:inline-block;padding:4px 11px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.02em}
+  .badge.done{background:#ecfdf3;color:#067647;border:1px solid #abefc6}
+  .badge.pending{background:#fff7ed;color:#b54708;border:1px solid #fedf89}
   .summary-note{margin-top:12px;color:var(--muted);font-size:14px}
   .resources p{margin:0 0 14px;color:var(--muted);font-size:15px;line-height:1.5}
   .resources a{display:inline-block;padding:13px 20px;border-radius:10px;background:var(--blue-soft);border:1px solid #dceaff;color:var(--blue);text-decoration:none;font-size:14px;font-weight:800}
   @media(max-width:600px){
     .top{padding:23px 20px} h1{font-size:30px} .grid{grid-template-columns:1fr} .info.full{grid-column:auto}
+    .summary-table th,.summary-table td{padding:11px 11px}
+    .summary-table td{font-size:15px}
+    .summary-table td:first-child{padding-right:12px}
   }
 </style>
 </head>
@@ -98,23 +104,17 @@
     <div class="summary-title">Your Rotation Summary</div>
     <div class="summary-section">
       <div class="summary-subtitle">🌙 Night Shifts</div>
-      <div style="overflow-x:auto">
-        <table class="summary-table" style="min-width:520px"><thead><tr><th>Date</th><th>Schedule</th><th>Resident on duty</th></tr></thead><tbody><tr><td>Friday, 9 Oct</td><td>17:00 · Night duty</td><td>To be confirmed</td></tr><tr><td>Monday, 2 Nov</td><td>17:00 · Night duty</td><td>To be confirmed</td></tr><tr><td>Monday, 23 Nov</td><td>17:00 · Night duty</td><td>To be confirmed</td></tr><tr><td>Thursday, 3 Dec</td><td>17:00 · Night duty</td><td>To be confirmed</td></tr></tbody></table>
-      </div>
+      <table class="summary-table"><thead><tr><th>Date</th><th>Details</th></tr></thead><tbody><tr><td>Friday, 9 Oct</td><td><div class="cell-main">17:00 · Night duty</div><div class="cell-sub"><span class="cell-label">Resident on duty:</span> To be confirmed</div></td></tr><tr><td>Monday, 2 Nov</td><td><div class="cell-main">17:00 · Night duty</div><div class="cell-sub"><span class="cell-label">Resident on duty:</span> To be confirmed</div></td></tr><tr><td>Monday, 23 Nov</td><td><div class="cell-main">17:00 · Night duty</div><div class="cell-sub"><span class="cell-label">Resident on duty:</span> To be confirmed</div></td></tr><tr><td>Thursday, 3 Dec</td><td><div class="cell-main">17:00 · Night duty</div><div class="cell-sub"><span class="cell-label">Resident on duty:</span> To be confirmed</div></td></tr></tbody></table>
     </div>
     <div class="summary-section">
       <div class="summary-subtitle">📆 Weekend Duties</div>
-      <div style="overflow-x:auto">
-        <table class="summary-table" style="min-width:640px"><thead><tr><th>Date</th><th>Duty</th><th>Working with</th><th>Resident on duty</th></tr></thead><tbody><tr><td>Saturday, 31 Oct</td><td>Night duty</td><td>—</td><td>Jean de Dieu &middot; <a href="tel:0780262127" style="color:var(--blue);text-decoration:none">0780262127</a></td></tr><tr><td>Sunday, 15 Nov</td><td>Day duty</td><td>Mizab Babiker Mustafa Tabidi Abdallah</td><td>To be confirmed</td></tr><tr><td>Sunday, 29 Nov</td><td>Day duty</td><td>Bonheur Mwizerwa</td><td>To be confirmed</td></tr></tbody></table>
-      </div>
+      <table class="summary-table"><thead><tr><th>Date</th><th>Details</th></tr></thead><tbody><tr><td>Saturday, 31 Oct</td><td><div class="cell-main">Night duty</div><div class="cell-sub"><span class="cell-label">Resident on duty:</span> Jean de Dieu &middot; <a href="tel:0780262127" style="color:var(--blue);text-decoration:none;white-space:nowrap">0780262127</a></div></td></tr><tr><td>Sunday, 15 Nov</td><td><div class="cell-main">Day duty</div><div class="cell-sub"><span class="cell-label">Working with:</span> Mizab Babiker Mustafa Tabidi Abdallah</div><div class="cell-sub"><span class="cell-label">Resident on duty:</span> To be confirmed</div></td></tr><tr><td>Sunday, 29 Nov</td><td><div class="cell-main">Day duty</div><div class="cell-sub"><span class="cell-label">Working with:</span> Bonheur Mwizerwa</div><div class="cell-sub"><span class="cell-label">Resident on duty:</span> To be confirmed</div></td></tr></tbody></table>
     </div>
     <div class="summary-section">
-      <div class="summary-subtitle">🎤 Presentation</div>
-      <div style="overflow-x:auto">
-        <table class="summary-table pres-table"><thead><tr><th>Date</th><th>Topic</th><th>Supervisor</th><th>Contact</th></tr></thead><tbody><tr><td>Tuesday, 27 Oct</td><td>Approach to Pancytopenia</td><td>Kagina Niyigena Aime Patience</td><td><a href="tel:0787490915" style="color:var(--blue);text-decoration:none">0787 490 915</a></td></tr><tr><td>Monday, 9 Nov</td><td>Hypertension diagnosis &amp; management</td><td>Imanishimwe Diane</td><td><a href="tel:0789034272" style="color:var(--blue);text-decoration:none">0789 034 272</a></td></tr></tbody></table>
-      </div>
+      <div class="summary-subtitle">🎤 Presentations</div>
+      <table class="summary-table"><thead><tr><th>When</th><th>Presentation</th></tr></thead><tbody><tr><td>Tuesday, 27 Oct</td><td><div class="cell-main">Approach to Pancytopenia</div><div class="cell-sub"><span class="cell-label">Supervisor:</span> Kagina Niyigena Aime Patience &middot; <a href="tel:0787490915" style="color:var(--blue);text-decoration:none;white-space:nowrap">0787 490 915</a></div></td></tr><tr><td>Monday, 9 Nov</td><td><div class="cell-main">Hypertension diagnosis &amp; management</div><div class="cell-sub"><span class="cell-label">Supervisor:</span> Imanishimwe Diane &middot; <a href="tel:0789034272" style="color:var(--blue);text-decoration:none;white-space:nowrap">0789 034 272</a></div></td></tr></tbody></table>
     </div>
-    <div class="summary-note">A quick view of your major duties across the full rotation.</div>
+    <div class="summary-note">A quick view of your major duties across the full rotation. Presentations already done are listed first.</div>
   </section>
 
   <section class="summary resources">
@@ -246,7 +246,7 @@
         <div class="grid">
           <div class="info full"><div class="info-label">Your Division</div><div class="info-value">Ward 3</div></div>
           <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">Philbert Ntwari</span><span class="chip">Shaban Kevin Muzungu</span><span class="chip">Mizab Babiker Mustafa Tabidi Abdallah</span><span class="chip">Nathalie Isimbi Bukoko</span></div></div>
-          <div class="info full presentation"><div class="info-label">Presentation</div><div class="info-value">Tuesday, 27 October · Approach to Pancytopenia<br><span style="color:var(--muted);font-weight:600">Supervisor:</span> Kagina Niyigena Aime Patience<br><span style="color:var(--muted);font-weight:600">Contact:</span> <a href="tel:0787490915" style="color:var(--blue);text-decoration:none">0787 490 915</a></div></div>
+          <div class="info full presentation"><div class="info-label">Presentation</div><div class="info-value">Tuesday, 27 October<br>Approach to Pancytopenia<br><span style="color:var(--muted);font-weight:600">Supervisor:</span> Kagina Niyigena Aime Patience<br><span style="color:var(--muted);font-weight:600">Contact:</span> <a href="tel:0787490915" style="color:var(--blue);text-decoration:none">0787 490 915</a></div></div>
           <div class="info full "><div class="info-label">Night Duty</div><div class="info-value">No night duty</div></div>
           <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">Saturday, 31 October · Night duty<br><span style="color:var(--muted);font-weight:600">Resident on duty:</span> Jean de Dieu &middot; <a href="tel:0780262127" style="color:var(--blue);text-decoration:none">0780262127</a></div></div>
           <div class="info full">
@@ -290,7 +290,7 @@
         <div class="grid">
           <div class="info full"><div class="info-label">Your Division</div><div class="info-value">Ward 3</div></div>
           <div class="info full"><div class="info-label">Your Colleagues</div><div class="names"><span class="chip">Philbert Ntwari</span><span class="chip">Shaban Kevin Muzungu</span><span class="chip">Mizab Babiker Mustafa Tabidi Abdallah</span><span class="chip">Nathalie Isimbi Bukoko</span></div></div>
-          <div class="info full presentation"><div class="info-label">Presentation</div><div class="info-value">Monday, 9 November · Hypertension diagnosis &amp; management<br><span style="color:var(--muted);font-weight:600">Supervisor:</span> Imanishimwe Diane<br><span style="color:var(--muted);font-weight:600">Contact:</span> <a href="tel:0789034272" style="color:var(--blue);text-decoration:none">0789 034 272</a></div></div>
+          <div class="info full presentation"><div class="info-label">Presentation</div><div class="info-value">Monday, 9 November<br>Hypertension diagnosis &amp; management<br><span style="color:var(--muted);font-weight:600">Supervisor:</span> Imanishimwe Diane<br><span style="color:var(--muted);font-weight:600">Contact:</span> <a href="tel:0789034272" style="color:var(--blue);text-decoration:none">0789 034 272</a></div></div>
           <div class="info full "><div class="info-label">Night Duty</div><div class="info-value">No night duty</div></div>
           <div class="info full"><div class="info-label">Weekend Duty</div><div class="info-value">Sunday, 15 November · Day duty<br><span style="color:var(--muted);font-weight:600">Working with:</span> Mizab Babiker Mustafa Tabidi Abdallah<br><span style="color:var(--muted);font-weight:600">Resident on duty:</span> To be confirmed</div></div>
           <div class="info full">
